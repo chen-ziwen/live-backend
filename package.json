@@ -1,10 +1,12 @@
 {
-  "name": "uni-backend",
+  "name": "live-backend",
   "version": "0.0.1",
-  "description": "小程序后端",
-  "main": "index.js",
+  "description": "mult live-backend",
+  "main": "./dist/app.js",
+  "type": "module",
   "scripts": {
-    "start": "node main.ts",
+    "start": "nodemon",
+    "build": "wepback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chiko",
@@ -12,9 +14,16 @@
   "dependencies": {
     "axios": "^1.7.3",
     "koa": "^2.15.3",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "@types/koa": "^2.15.0",
+    "@types/ws": "^8.5.12",
+    "ts-loader": "^9.5.1",
+    "tsc": "^2.0.4",
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0"
   }
 }
