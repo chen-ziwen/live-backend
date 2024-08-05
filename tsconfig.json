@@ -7,13 +7,30 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "skipLibCheck": true,
     "rootDir": "./",
-    "outDir": "dist",
+    "outDir": "./dist",
+    "baseUrl": "./",
     "sourceMap": true,
     "alwaysStrict": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@app/*": [
+        "src/app"
+      ],
+      "@stream/*": [
+        "src/stream",
+      ],
+      "@utils/*": [
+        "src/utils"
+      ]
+    },
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ],
   "inclue": [
     "src/**/*.ts",
