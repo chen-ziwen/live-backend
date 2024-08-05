@@ -1,3 +1,3 @@
-import { run } from "./src/app/router";
+import { run } from "./src/app/router/server";
 
 run();

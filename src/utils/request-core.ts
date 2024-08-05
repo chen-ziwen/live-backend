@@ -1,5 +1,5 @@
-import axios, {AxiosInstance, AxiosResponse} from "axios";
-import {userAgent} from "../const/user-agent";
+import axios, { AxiosInstance, AxiosResponse } from "axios";
+import { userAgent } from "../const/user-agent";
 
 export class HttpRequestCore {
     protected mService: AxiosInstance;
@@ -43,8 +43,8 @@ export class HttpRequestCore {
             }
         }
         this.mLockedHandler = setTimeout(() => {
-                this.mLocked = 0;
-            },
+            this.mLocked = 0;
+        },
             4e4 * Math.pow(2, this.mLocked));
     }
 
@@ -52,7 +52,7 @@ export class HttpRequestCore {
         if (this.locked) {
             return Promise.reject("net.APILOCKED");
         }
-        return this.mService.get(uri, {params}).catch((err) => {
+        return this.mService.get(uri, { params }).catch((err) => {
             let msg = err;
             if (err && err.response) {
                 msg = err.response.data;
